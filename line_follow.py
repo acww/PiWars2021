@@ -12,8 +12,6 @@ import sys
 import time
 import threading
 from queue import LifoQueue
-sys.path.insert(1, '/home/pi/piwars2020-master/pixel_ring/examples')
-
 import threaded               # Audio handling library
 
 get_side = threaded.get_side
