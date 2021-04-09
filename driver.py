@@ -10,8 +10,8 @@ motors = Base.Motors()   # Motor driving class
 def fail(meh):
     pass
 try:
-    import threadseg
-    line_follow = threadseg.line
+    import line_follow
+    line_follow = line_follow.line
 except:
     line_follow = fail
 
