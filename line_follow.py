@@ -1,5 +1,4 @@
-# Here are some comments that explain what the purpose of this file is.
-#
+# Follows a line with forks in using opencv
 # Written by Angus Wallis 2020/21
 
 from picamera.array import PiRGBArray   # Necessary imports
