@@ -1,0 +1,1 @@
+I used this https://github.com/respeaker/mic_array/blob/master/gcc_phat.py for the gcc_phat library, and this https://github.com/pololu/dual-g2-high-power-motor-driver-rpi for the motor driving library.
