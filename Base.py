@@ -9,7 +9,7 @@ import time
 # Light class
 class lights:
     # Shows direction and speed of the motors through 10 neopixels
-    class drive:
+    class drive_lights:
         # Sets up the side for the lights
         def __init__(self, side):
             if side == 'left':
@@ -65,8 +65,8 @@ class lights:
 
     # Sets up sides
     def __init__(self):
-        self.left = self.drive('left')
-        self.right = self.drive('right')
+        self.left = self.drive_lights('left')
+        self.right = self.drive_lights('right')
 
     # Stops lights
     def stop(self):
