@@ -1,5 +1,7 @@
-# Motor driving and light control for RedBrick
-# Written by Angus Wallis 2021
+# Higher level motor and light driver for RedBrick,
+# uses Pololu's motor driver library and Pimoroni's Blinkt library
+# (slightly modified foor pixels and pins)
+# by Angus Wallis 2021
 
 # Light and motor imports
 from blinkt import set_pixel, show, set_all
@@ -141,13 +143,14 @@ class Motors:
         except:
             # Autonomous driving commands
             # Left turn
-            if left is 'left':
+            command = left
+            if command is 'left':
                 self.motors(self.turn_speed, 0)
             # Right turn
-            elif left is 'right':
+            elif command is 'right':
                 self.motors(0, self.turn_speed)
             # aligns to a x position (designed for my line following library
-            elif left is 'allign':
+            elif command is 'allign':
                 x = right
                 if abs(x-self.MID) < 17 and intense == 's':
                     # Non-extreme handling
@@ -162,5 +165,5 @@ class Motors:
                         self.drive('right')
                     else:
                         self.drive('left')
-            elif left is 'stop':
+            elif command is 'stop':
                 self.stop()
